@@ -607,6 +607,71 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+  padding: 2rem;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.modal-close:hover {
+  opacity: 0.7;
+}
+
+.modal-close svg {
+  width: 28px;
+  height: 28px;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.modal-description {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
 .info-card {
   margin-top: 3.5rem;
   padding: 1.5rem;

@@ -13,15 +13,15 @@ const codeSnippets = [
   
   return <Career growth />;
 }`,
-    label: "5 internships"
+    label: "3+ internships"
   },
   {
     code: `const projects = await Portfolio
   .findAll()
   .then(p => p.deploy());
 
-// 10+ shipped`,
-    label: "10+ projects"
+// 5+ shipped`,
+    label: "5+ projects"
   },
   {
     code: `fetch("/api/gpa")
