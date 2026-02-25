@@ -1,65 +1,101 @@
-import Image from "next/image";
+import TypewriterCode from "./components/TypewriterCode";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <section className="hero">
+        <div className="container">
+          <div className="hero-inner">
+            <div className="hero-content">
+              <p className="hero-label animate-fade delay-1">software engineer</p>
+              <h1 className="hero-title animate-fade delay-1">
+                prachod<br />
+                <span>kakatur</span>
+              </h1>
+              <p className="hero-description animate-fade delay-2">
+                building elegant solutions at the intersection of design and technology. 
+                currently crafting experiences at the university of illinois.
+              </p>
+              <div className="hero-buttons animate-fade delay-3">
+                <a href="/experience" className="btn btn-primary">view work</a>
+                <a href="/contact" className="btn btn-secondary">get in touch</a>
+              </div>
+            </div>
+            
+            <div className="hero-visual">
+              <div className="code-card animate-fade delay-4">
+                <div className="code-card-glow"></div>
+                <div className="code-card-inner">
+                  <div className="code-card-dots">
+                    <div className="code-card-dot"></div>
+                    <div className="code-card-dot"></div>
+                    <div className="code-card-dot"></div>
+                  </div>
+                  <div className="code-block">
+                    <p className="code-comment">{`// who am i?`}</p>
+                    <p><span className="code-keyword">const</span> developer = {"{"}</p>
+                    <p className="indent">name: <span className="code-string">{`"prachod"`}</span>,</p>
+                    <p className="indent">role: <span className="code-string">{`"full-stack engineer"`}</span>,</p>
+                    <p className="indent">passion: <span className="code-string">{`"building products"`}</span>,</p>
+                    <p className="indent">location: <span className="code-string">{`"los angeles, ca"`}</span></p>
+                    <p>{"};"}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="typewriter-section">
+        <div className="container">
+          <TypewriterCode />
         </div>
-      </main>
+      </section>
+
+      <section className="tech">
+        <div className="container">
+          <h2 className="section-title">technologies i work with</h2>
+          <div className="tech-grid">
+            <div className="tech-card">
+              <p className="tech-card-label">languages</p>
+              <ul>
+                <li>python</li>
+                <li>typescript</li>
+                <li>java</li>
+                <li>c++</li>
+              </ul>
+            </div>
+            <div className="tech-card">
+              <p className="tech-card-label">frontend</p>
+              <ul>
+                <li>react</li>
+                <li>next.js</li>
+                <li>tailwind</li>
+                <li>firebase</li>
+              </ul>
+            </div>
+            <div className="tech-card">
+              <p className="tech-card-label">backend</p>
+              <ul>
+                <li>node.js</li>
+                <li>fastapi</li>
+                <li>flask</li>
+                <li>spring boot</li>
+              </ul>
+            </div>
+            <div className="tech-card">
+              <p className="tech-card-label">data & ml</p>
+              <ul>
+                <li>pytorch</li>
+                <li>pandas</li>
+                <li>mongodb</li>
+                <li>postgresql</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
