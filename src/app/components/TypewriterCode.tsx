@@ -1,19 +1,19 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 
 const codeSnippets = [
   {
     code: `function Experience() {
-  const internships = [
-    "zentora",
-    "datahub", 
-    "brucker"
+  const experience = [
+    "ibm",
+    "robert half",
+    "zentora", "brucker"
   ];
   
   return <Career growth />;
 }`,
-    label: "3+ internships"
+    label: "3 internships + software engineer"
   },
   {
     code: `const projects = await Portfolio
@@ -28,9 +28,9 @@ const codeSnippets = [
   .then(r => r.json())
   .then(data => {
     console.log(data.gpa);
-    // 3.84
+    // 3.72
   });`,
-    label: "3.84 gpa"
+    label: "3.72 gpa"
   },
   {
     code: `useEffect(() => {
@@ -111,3 +111,4 @@ export default function TypewriterCode() {
     </div>
   );
 }
+
