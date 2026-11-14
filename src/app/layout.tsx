@@ -3,13 +3,11 @@ import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
 
-// Set the portfolio page title and description.
 export const metadata: Metadata = {
   title: "prachod kakatur",
   description: "software engineer & creative developer",
 };
 
-// Render the shared portfolio navigation, privacy link, and analytics.
 export default function RootLayout({
   children,
 }: Readonly<{

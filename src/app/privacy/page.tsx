@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Set the privacy notice page title and description.
 export const metadata: Metadata = {
   title: "privacy | prachod kakatur",
   description: "How this website uses Vercel hosting and self-hosted Umami analytics.",
 };
 
-// Explain portfolio hosting, analytics data, and privacy choices.
 export default function PrivacyPage() {
   return (
     <div className="page">
