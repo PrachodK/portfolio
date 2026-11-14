@@ -40,7 +40,7 @@ export default function RootLayout({
             src="https://analytics.azurlaneecgc.com/script.js"
             strategy="afterInteractive"
             data-website-id="199735cb-0348-47e8-83da-4b5cf4368e96"
-            data-domains="portfolio-prachods-projects.vercel.app"
+            data-domains="prachodkakatur.vercel.app"
             data-do-not-track="true"
             data-exclude-search="true"
             data-exclude-hash="true"
