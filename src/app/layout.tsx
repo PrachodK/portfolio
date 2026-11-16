@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,12 +24,24 @@ export default function RootLayout({
               <Link href="/experience" className="nav-link">experience</Link>
               <Link href="/gallery" className="nav-link">gallery</Link>
               <Link href="/contact" className="nav-link">contact</Link>
+              <Link href="/privacy" className="nav-link">privacy</Link>
             </div>
           </div>
         </nav>
         <main className="main">
           {children}
         </main>
+        {process.env.VERCEL_ENV === "production" && (
+          <Script
+            src="https://analytics.azurlaneecgc.com/script.js"
+            strategy="afterInteractive"
+            data-website-id="199735cb-0348-47e8-83da-4b5cf4368e96"
+            data-domains="prachodkakatur.vercel.app"
+            data-do-not-track="true"
+            data-exclude-search="true"
+            data-exclude-hash="true"
+          />
+        )}
       </body>
     </html>
   );
