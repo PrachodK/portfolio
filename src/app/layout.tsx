@@ -24,17 +24,13 @@ export default function RootLayout({
               <Link href="/experience" className="nav-link">experience</Link>
               <Link href="/gallery" className="nav-link">gallery</Link>
               <Link href="/contact" className="nav-link">contact</Link>
+              <Link href="/privacy" className="nav-link">privacy</Link>
             </div>
           </div>
         </nav>
         <main className="main">
           {children}
         </main>
-        <footer className="site-footer">
-          <div className="container">
-            <Link href="/privacy">privacy</Link>
-          </div>
-        </footer>
         {process.env.VERCEL_ENV === "production" && (
           <Script
             src="https://analytics.azurlaneecgc.com/script.js"
